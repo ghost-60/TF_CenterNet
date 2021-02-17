@@ -1,14 +1,14 @@
 # common
 classes_file = './data/classes/voc.names'
-num_classes = 20
+num_classes = 1
 input_image_h = 448
 input_image_w = 448
 down_ratio = 4
-max_objs = 150
-
+max_objs = 10
+ot_nodes = ['detector/hm/Sigmoid', "detector/wh/Relu", "detector/reg/Relu"]
 # train
 train_data_file = './data/dataset/voc_train.txt'
-batch_size = 16
+batch_size = 4
 epochs = 80
  # learning rate
 lr_type="piecewise"# "exponential","piecewise","CosineAnnealing"

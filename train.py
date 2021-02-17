@@ -10,6 +10,11 @@ from tqdm import tqdm
 from CenterNet import CenterNet
 from utils.generator import get_data
 from net.resnet import load_weights
+from datetime import datetime
+
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.3)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
 
 def train():
     # define dataset
@@ -38,12 +43,12 @@ def train():
     testset_init_op = iterator.make_initializer(test_dataset)
 
     input_data, batch_hm, batch_wh, batch_reg, batch_reg_mask, batch_ind = iterator.get_next()
-    input_data.set_shape([None, None, None, 3])
-    batch_hm.set_shape([None, None, None, None])
-    batch_wh.set_shape([None, None, None])
-    batch_reg.set_shape([None, None, None])
-    batch_reg_mask.set_shape([None, None])
-    batch_ind.set_shape([None, None])
+    input_data.set_shape([None, cfg.input_image_h, cfg.input_image_w, 3])
+    batch_hm.set_shape([None,cfg.input_image_h//cfg.down_ratio, cfg.input_image_w//cfg.down_ratio, cfg.num_classes])
+    batch_wh.set_shape([None, cfg.max_objs, 2])
+    batch_reg.set_shape([None, cfg.max_objs, 2])
+    batch_reg_mask.set_shape([None, cfg.max_objs])
+    batch_ind.set_shape([None, cfg.max_objs])
 
 
     # training flag 
@@ -90,7 +95,7 @@ def train():
         with tf.control_dependencies(update_ops):
             train_op = optimizer.minimize(total_loss, global_step=global_step)
 
-    saver  = tf.train.Saver(tf.global_variables(), max_to_keep=10)
+    saver  = tf.train.Saver(tf.global_variables(), max_to_keep=1)
     
     
     with tf.Session() as sess:
@@ -110,8 +115,18 @@ def train():
         # train 
         sess.run(tf.global_variables_initializer())
         if cfg.pre_train:
-            load_weights(sess,'./pretrained_weights/resnet34.npy')
+            load_weights(sess,'./pretrained_weights/resnet18.npy')
+
+        writer = tf.compat.v1.summary.FileWriter("./checkpoint", sess.graph)
+        #ot_nodes = ['detector/hm/Sigmoid', "detector/wh/BiasAdd", "detector/reg/BiasAdd"]
+        ot_nodes = cfg.ot_nodes
+        #ot_nodes = ['detector/Conv2D_1', 'detector/Conv2D_3', 'detector/Conv2D_5']
+        today = datetime.today().strftime('%Y_%m_%d')
+        #saver.restore(sess, "./checkpoint/centernet_test_loss=0.7671.ckpt-70")
+        #saver.restore(sess,tf.train.latest_checkpoint('checkpoint/inference'))
+        test_epoch_loss = 0
         for epoch in range(1, 1+cfg.epochs):
+            
             pbar = tqdm(range(num_train_batch))
             train_epoch_loss, test_epoch_loss = [], []
             sess.run(trainset_init_op)
@@ -129,11 +144,17 @@ def train():
                 test_epoch_loss.append(test_step_loss)
 
             train_epoch_loss, test_epoch_loss = np.mean(train_epoch_loss), np.mean(test_epoch_loss)
-            ckpt_file = "./checkpoint/centernet_test_loss=%.4f.ckpt" % test_epoch_loss
+            ckpt_file = "./checkpoint/" + today + "-centernet_test_loss=%.4f.ckpt" % test_epoch_loss
             log_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
             print("=> Epoch: %2d Time: %s Train loss: %.2f Test loss: %.2f Saving %s ..."
                             %(epoch, log_time, train_epoch_loss, test_epoch_loss, ckpt_file))
             saver.save(sess, ckpt_file, global_step=epoch)
+            # frozen_graph_def = tf.compat.v1.graph_util.convert_variables_to_constants(
+            #     sess,
+            #     sess.graph_def,
+            #     ot_nodes)
+            # with open('checkpoint/centernet_graph.pb', 'wb') as f:
+            #     f.write(frozen_graph_def.SerializeToString())
 
 
 if __name__ == '__main__': train()

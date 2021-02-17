@@ -2,7 +2,7 @@ import tensorflow as tf
 import cfg
 import loss
 from net import resnet
-from net.layers import _conv, upsampling
+from net.layers import _conv, upsampling, _conv_nn
 import numpy as np
 class CenterNet():
     def __init__(self, inputs, is_training):
@@ -52,10 +52,10 @@ class CenterNet():
             hm = tf.layers.conv2d(hm, cfg.num_classes, 1, 1, padding='valid', activation = tf.nn.sigmoid, bias_initializer=tf.constant_initializer(-np.log(99.)), name='hm')
 
             wh = _conv(features, 64, [3,3], is_training=self.is_training)
-            wh = tf.layers.conv2d(wh, 2, 1, 1, padding='valid', activation = None, name='wh')
+            wh = tf.layers.conv2d(wh, 2, 1, 1, padding='valid', activation = tf.nn.relu, name='wh')
             
             reg =  _conv(features, 64, [3,3], is_training=self.is_training)
-            reg = tf.layers.conv2d(reg, 2, 1, 1, padding='valid', activation = None, name='reg')
+            reg = tf.layers.conv2d(reg, 2, 1, 1, padding='valid', activation = tf.nn.relu, name='reg')
 
         return hm, wh, reg
 
