@@ -20,28 +20,37 @@ sess = tf.Session()
 inputs = tf.placeholder(shape=[1,cfg.input_image_h, cfg.input_image_w,3],dtype=tf.float32)
 model = CenterNet(inputs, False)
 saver = tf.train.Saver()
-saver.restore(sess,tf.train.latest_checkpoint(ckpt_path))
+#saver.restore(sess,tf.train.latest_checkpoint(ckpt_path))
+saver.restore(sess,'./checkpoint/2021_05_19-centernet_test_person_loss=3.0064.ckpt-80')
 
 hm = model.pred_hm
 wh = model.pred_wh
 reg = model.pred_reg
+pose = model.pred_pose
 # c2 = model.c2
 # c3 = model.c3
 # c4 = model.c4
 # c5 = model.c5
 # first_layer = model.first_layer
-det = decode(hm, wh, reg, K=cfg.max_objs)
+det = decode(hm, wh, pose, reg, K=cfg.max_objs)
 
 class_names= read_class_names(cfg.classes_file)
-img_names = os.listdir('D:\\Courses\\Yolo\\DroneDataset\\dataset_new\\JPEGImages\\')
-random.shuffle(img_names)
+test_imgs = open(cfg.train_data_file, 'r').readlines()
+img_names = glob.glob('D:\\Courses\\Centernet\\DronePoses\\Dataset\\scene\\MainCamera\\*.png')
+random.shuffle(test_imgs)
 
 #ot_nodes = ['detector/hm/Sigmoid', "detector/wh/BiasAdd", "detector/reg/BiasAdd"]
 ot_nodes = cfg.ot_nodes
 #ot_nodes = ['detector/Conv2D_1', 'detector/Conv2D_3', 'detector/Conv2D_5']
 writer = tf.compat.v1.summary.FileWriter("./output", sess.graph)
-for img_name in img_names:
-    img_path = 'D:\\Courses\\Yolo\\DroneDataset\\dataset_new\\JPEGImages\\' + img_name
+for img_name in test_imgs:
+    #img_path = 'D:\\Courses\\Yolo\\DroneDataset\\dataset_v2\\' + img_name
+    s = img_name.split()
+    img_path = s[0]
+
+    print(img_path)
+    labels = np.array([list(map(lambda x: float(x), box.split(','))) for box in s[1:]])
+    print(labels)
     original_image = cv2.imread(img_path)
     original_image_size = original_image.shape[:2]
     image_data = image_preporcess(np.copy(original_image), [cfg.input_image_h, cfg.input_image_w])
@@ -61,7 +70,8 @@ for img_name in img_names:
     detections = sess.run(det, feed_dict={inputs: image_data})
     # heat = sess.run(first_layer, feed_dict={inputs: image_data})
     # print(heat)
-    #print(detections[0, :, 4])
+    # print(detections.shape)
+    # print(detections[:, :, 6])
     detections = post_process(detections, original_image_size, [cfg.input_image_h,cfg.input_image_w], cfg.down_ratio, cfg.score_threshold)
     
     print('Inferencce took %.1f ms (%.2f fps)' % ((time.time()-t0)*1000, 1/(time.time()-t0)))
@@ -80,7 +90,9 @@ for img_name in img_names:
             bboxes = results[:,0:4]
             scores = results[:,4]
             classes = results[:, 5]
-            bboxes_draw_on_img(original_image, classes, scores, bboxes, class_names)
+            pose = results[:, 6:7]
+            #print(pose)
+            bboxes_draw_on_img(original_image, classes, scores, bboxes, class_names, pose)
         
     else:
         bboxes = detections[:,0:4]

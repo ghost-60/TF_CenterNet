@@ -1,5 +1,6 @@
 import tensorflow as tf
-
+import random
+import string
 def _bn(inputs, is_training):
     bn = tf.layers.batch_normalization(
         inputs=inputs,
@@ -15,7 +16,7 @@ def _conv_nn(inputs, filters, kernel_size, strides=1, padding='same', activation
         conv = activation(conv)
     return conv
 
-def _conv(inputs, filters, kernel_size, strides=1, padding='same', activation=tf.nn.relu, is_training=False, use_bn=True):
+def _conv(inputs, filters, kernel_size, strides=1, padding='SAME', activation=tf.nn.relu, is_training=False, use_bn=True, name = "w100"):
     if use_bn:
         conv = tf.layers.conv2d(
             inputs=inputs,
@@ -25,6 +26,8 @@ def _conv(inputs, filters, kernel_size, strides=1, padding='same', activation=tf
             padding=padding,
             use_bias = False
         )
+        
+        
         conv = _bn(conv, is_training)
     else:
         conv = tf.layers.conv2d(
@@ -34,18 +37,28 @@ def _conv(inputs, filters, kernel_size, strides=1, padding='same', activation=tf
             strides=strides,
             padding=padding
         )
+        #w = tf.get_variable("w", shape=[kernel_size[0], kernel_size[1], inputs.shape[-1], filters], initializer=tf.contrib.layers.xavier_initializer())
+        #conv = tf.nn.conv2d(inputs, w, [1, 1, 1, 1], padding='SAME')
+    
+    
+    #name = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+    #filter_ = tf.get_variable(name, shape=[kernel_size[0], kernel_size[1], inputs.shape[-1], filters], initializer=tf.contrib.layers.xavier_initializer())
+    #conv = tf.nn.conv2d(inputs, filter_, [1, strides, strides, 1], padding=padding)
+    #print('conv shape: ', conv.shape)
+    # if(use_bn):
+    #     conv = _bn(conv, is_training)
     if activation is not None:
         conv = activation(conv)
     return conv
 
-def upsampling(inputs, method):
+def upsampling(inputs):
     #assert method in ["resize", "deconv"]
 
     #if method == "resize":
     #input_shape = tf.shape(inputs)
-    #output = tf.image.resize(inputs, (input_shape[1] * 2, input_shape[2] * 2))
+    #output = tf.image.resize_nearest_neighbor(inputs, (input_shape[1] * 2, input_shape[2] * 2))
 
-    #if method == "deconv":
+    # if method == "deconv":
     numm_filter = inputs.shape.as_list()[-1]
     output = tf.layers.Conv2DTranspose(
         #inputs=inputs,

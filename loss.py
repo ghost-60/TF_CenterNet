@@ -15,14 +15,17 @@ def focal_loss(hm_pred, hm_true):
 	loss = tf.cond(tf.greater(num_pos, 0), lambda : (pos_loss + neg_loss) / num_pos, lambda : neg_loss)
 	return loss
 
-def reg_l1_loss(y_pred, y_true, indices, mask):
+def msloss(y_pred, y_true):
+	return tf.compat.v1.losses.mean_squared_error(y_true, y_pred)
+
+def reg_l1_loss(y_pred, y_true, indices, mask, channels):
 	b = tf.shape(y_pred)[0]
 	k = tf.shape(indices)[1]
 	c = tf.shape(y_pred)[-1]
 	y_pred = tf.reshape(y_pred, (b, -1, c))
 	indices = tf.cast(indices, tf.int32)
 	y_pred = tf.batch_gather(y_pred, indices)
-	mask = tf.tile(tf.expand_dims(mask, axis=-1), (1, 1, 2))
+	mask = tf.tile(tf.expand_dims(mask, axis=-1), (1, 1, channels))
 	total_loss = tf.reduce_sum(tf.abs(y_true * mask - y_pred * mask))
 	loss = total_loss / (tf.reduce_sum(mask) + 1e-5)
 	return loss

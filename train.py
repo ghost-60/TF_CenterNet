@@ -15,6 +15,8 @@ from datetime import datetime
 gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.3)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
+def getVal(temp_input):
+    return temp_input
 
 def train():
     # define dataset
@@ -27,28 +29,29 @@ def train():
     train_dataset = train_dataset.shuffle(num_train_imgs)
     train_dataset = train_dataset.batch(cfg.batch_size)
     train_dataset = train_dataset.map(lambda x: tf.py_func(get_data,inp=[x, True], 
-                                    Tout=[tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32]),
-                                    num_parallel_calls=6)
+                                    Tout=[tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32]),
+                                    num_parallel_calls=7)
     train_dataset = train_dataset.prefetch(3)
     
     test_dataset = tf.data.TextLineDataset(cfg.test_data_file)
     test_dataset = test_dataset.batch(2)
     test_dataset = test_dataset.map(lambda x: tf.py_func(get_data,inp=[x, False], 
-                                    Tout=[tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32]),
-                                    num_parallel_calls=6)
+                                    Tout=[tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32]),
+                                    num_parallel_calls=7)
     test_dataset = test_dataset.prefetch(3)
 
     iterator = tf.data.Iterator.from_structure(train_dataset.output_types, train_dataset.output_shapes)
     trainset_init_op = iterator.make_initializer(train_dataset)
     testset_init_op = iterator.make_initializer(test_dataset)
 
-    input_data, batch_hm, batch_wh, batch_reg, batch_reg_mask, batch_ind = iterator.get_next()
+    input_data, batch_hm, batch_wh, batch_reg, batch_reg_mask, batch_ind, batch_pose = iterator.get_next()
     input_data.set_shape([None, cfg.input_image_h, cfg.input_image_w, 3])
     batch_hm.set_shape([None,cfg.input_image_h//cfg.down_ratio, cfg.input_image_w//cfg.down_ratio, cfg.num_classes])
     batch_wh.set_shape([None, cfg.max_objs, 2])
     batch_reg.set_shape([None, cfg.max_objs, 2])
     batch_reg_mask.set_shape([None, cfg.max_objs])
     batch_ind.set_shape([None, cfg.max_objs])
+    batch_pose.set_shape([None, cfg.max_objs, cfg.depth])
 
 
     # training flag 
@@ -57,8 +60,8 @@ def train():
     # difine model and loss
     model = CenterNet(input_data, is_training)
     with tf.variable_scope('loss'):
-        hm_loss, wh_loss, reg_loss = model.compute_loss(batch_hm, batch_wh, batch_reg, batch_reg_mask, batch_ind)
-        total_loss = hm_loss + wh_loss + reg_loss
+        hm_loss, wh_loss, reg_loss, pose_loss = model.compute_loss(batch_hm, batch_wh, batch_reg, batch_reg_mask, batch_ind, batch_pose)
+        total_loss = hm_loss + wh_loss + reg_loss + pose_loss
     
 
     # define train op
@@ -99,18 +102,22 @@ def train():
     
     
     with tf.Session() as sess:
+        test_epoch_loss = 0
         with tf.name_scope('summary'):
             tf.summary.scalar("learning_rate", learning_rate)
             tf.summary.scalar("hm_loss", hm_loss)
             tf.summary.scalar("wh_loss", wh_loss)
             tf.summary.scalar("reg_loss", reg_loss)
+            tf.summary.scalar("pose_loss", pose_loss)
             tf.summary.scalar("total_loss", total_loss)
 
+            test_scalar = tf.placeholder(tf.float32)
             logdir = "./log/"
             if os.path.exists(logdir): shutil.rmtree(logdir)
             os.mkdir(logdir)
             write_op = tf.summary.merge_all()
             summary_writer  = tf.summary.FileWriter(logdir, graph=sess.graph)
+            test_summary = tf.summary.scalar("test_loss", test_scalar)
         
         # train 
         sess.run(tf.global_variables_initializer())
@@ -122,9 +129,9 @@ def train():
         ot_nodes = cfg.ot_nodes
         #ot_nodes = ['detector/Conv2D_1', 'detector/Conv2D_3', 'detector/Conv2D_5']
         today = datetime.today().strftime('%Y_%m_%d')
-        #saver.restore(sess, "./checkpoint/centernet_test_loss=0.7671.ckpt-70")
-        #saver.restore(sess,tf.train.latest_checkpoint('checkpoint/inference'))
-        test_epoch_loss = 0
+        #saver.restore(sess, "./checkpoint/2021_05_09-centernet_test_person_loss=0.7642.ckpt-80")
+        #saver.restore(sess,tf.train.latest_checkpoint('checkpoint'))
+        
         for epoch in range(1, 1+cfg.epochs):
             
             pbar = tqdm(range(num_train_batch))
@@ -144,10 +151,13 @@ def train():
                 test_epoch_loss.append(test_step_loss)
 
             train_epoch_loss, test_epoch_loss = np.mean(train_epoch_loss), np.mean(test_epoch_loss)
-            ckpt_file = "./checkpoint/" + today + "-centernet_test_loss=%.4f.ckpt" % test_epoch_loss
+            test_summ = test_summary.eval(feed_dict={test_scalar: test_epoch_loss})
+            summary_writer.add_summary(test_summ, epoch)
+            ckpt_file = "./checkpoint/" + today + "-centernet_test_person_loss=%.4f.ckpt" % test_epoch_loss
             log_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
             print("=> Epoch: %2d Time: %s Train loss: %.2f Test loss: %.2f Saving %s ..."
                             %(epoch, log_time, train_epoch_loss, test_epoch_loss, ckpt_file))
+            
             saver.save(sess, ckpt_file, global_step=epoch)
             # frozen_graph_def = tf.compat.v1.graph_util.convert_variables_to_constants(
             #     sess,
