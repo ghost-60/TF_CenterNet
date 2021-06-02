@@ -4,9 +4,9 @@ import xml.etree.ElementTree as ET
 
 def convert_voc_annotation(data_path, data_type, anno_path, use_difficult_bbox=True):
 
-    classes = ['drone', 'bicycle', 'bird', 'boat', 'bottle', 'bus',
+    classes = ['drone', 'person', 'bird', 'boat', 'bottle', 'bus',
                'car', 'cat', 'chair', 'cow', 'diningtable', 'dog', 'horse',
-               'motorbike', 'person', 'pottedplant', 'sheep', 'sofa',
+               'motorbike', 'bicycle', 'pottedplant', 'sheep', 'sofa',
                'train', 'tvmonitor']
     img_inds_file = os.path.join(data_path, 'ImageSets', 'Main', data_type + '.txt')
     with open(img_inds_file, 'r') as f:

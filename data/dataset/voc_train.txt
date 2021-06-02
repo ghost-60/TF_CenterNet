@@ -1,0 +1,156 @@
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000001.png 130,121,159,134,0,4.521762612726333 197,299,233,328,0,3.3181961235474526
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000002.png 5,130,39,147,0,4.3511251464939456 114,308,161,340,0,3.203897446158771 391,61,460,92,0,2.274348024643865
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000003.png 51,132,86,145,0,4.065561240529253 179,309,221,346,0,2.96536939810617
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000004.png 32,156,73,175,0,3.796522656760895 163,358,213,394,0,2.7462631669702406
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000005.png 182,156,221,175,0,3.513064216387933 306,377,364,416,0,2.5507914998392924
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000006.png 257,142,292,163,0,3.2734131912637356 400,394,462,439,0,2.396446279417722
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000007.png 53,162,110,183,0,2.800887904195491 283,425,350,475,0,2.1315387210293584
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000008.png 2,169,60,201,0,2.2129623659251103 322,468,388,525,0,2.00829361763651
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000009.png 299,505,366,561,0,2.066613939783014
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000010.png 259,518,331,579,0,2.2170690545975162
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000011.png 331,492,398,549,0,2.481047548866226
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000012.png 338,425,401,469,0,2.6289985849753896
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000013.png 52,227,126,267,0,1.6004196562572333 418,413,478,457,0,2.8558032277002283
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000014.png 235,211,314,243,0,1.5066305098517134
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000015.png 278,196,371,235,0,1.341721773129984
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000018.png 365,228,457,282,0,1.5236549255493208 391,374,432,408,0,3.16943364840758 305,153,334,168,0,4.282587723824782
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000019.png 342,166,433,213,0,1.639106922105221 294,315,338,351,0,3.2181588376153045 172,106,205,124,0,4.287266504708795
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000020.png 428,114,480,155,0,1.815891317888335 316,277,359,309,0,3.2881283004149457 178,72,209,90,0,4.235982260327038
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000021.png 359,321,405,349,0,3.174543674406824 217,120,248,133,0,3.9963816131115943
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000024.png 242,367,287,398,0,2.640800994827072
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000025.png 245,410,300,448,0,2.5852161049776177
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000026.png 247,400,300,442,0,2.509419212299137
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000027.png 272,397,322,435,0,2.528627680327703
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000028.png 273,390,319,426,0,2.514838882175566
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000029.png 317,388,369,421,0,2.6078398669620904
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000030.png 395,396,445,431,0,2.671317165787758
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000033.png 131,156,229,198,0,1.0876545066981789
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000034.png 206,165,327,213,0,0.9503490798250547
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000035.png 356,136,480,210,0,0.8841468298262255
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000037.png 394,329,441,362,0,2.710107696135602
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000038.png 349,322,402,361,0,2.7307754871237915
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000039.png 321,126,351,148,0,3.896325873449582 282,349,330,383,0,2.711330798381323
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000041.png 284,187,311,205,0,3.920937267146191 266,397,310,435,0,2.7066396330989195
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000044.png 309,174,344,191,0,3.493821783715205 376,398,432,436,0,2.4774792766252163
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000045.png 279,205,314,224,0,3.0903605636401004 391,453,455,501,0,2.212439008104576
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000046.png 228,208,276,230,0,2.742345641472809 406,487,479,545,0,2.0311787309931444
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000047.png 290,208,351,231,0,2.442786242831886 398,339,445,372,0,2.76018653765359
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000048.png 270,210,332,240,0,2.4217908517124087 365,339,417,375,0,2.7945559730157075 416,92,450,110,0,4.109969433744992
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000049.png 251,221,301,246,0,2.325940714907043 344,346,396,383,0,2.7772296230195983 375,108,408,123,0,4.096396657625303
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000050.png 247,214,292,243,0,2.345968073871923 341,339,386,377,0,2.859692855727509 331,101,367,118,0,4.161985713019795
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000053.png 288,193,345,223,0,2.3024737498974237 359,309,404,336,0,2.949287116230461 260,72,296,89,0,4.001741736037387
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000055.png 243,216,305,246,0,2.219465220897142 292,320,340,348,0,2.930426954669549 120,101,158,117,0,3.729478554012869
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000057.png 359,202,425,234,0,2.112613570145388 354,315,406,345,0,2.818134781884659 112,92,156,110,0,3.2906566598813205
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000059.png 406,358,456,394,0,2.5947718574714043 94,106,146,129,0,2.6038391253643747
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000060.png 435,355,480,397,0,2.6544924129975604 88,97,144,120,0,2.3952053421706405
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000061.png 107,85,166,110,0,2.2267166984709954
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000062.png 167,70,233,100,0,2.207488988624059
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000063.png 229,73,286,102,0,2.063748444939697
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000064.png 229,76,286,106,0,1.8976272365730744
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000065.png 195,62,259,98,0,1.6665064928246258
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000069.png 143,83,294,146,0,0.8194023560983176
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000070.png 262,0,445,70,0,0.9183290832903627
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000072.png 341,200,385,229,0,2.8698256104071054 226,338,277,372,0,2.680648890154431 367,26,480,105,0,1.0541744788937848
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000073.png 189,211,234,237,0,2.830023669749941 98,355,143,387,0,2.6217604042772273 278,83,421,149,0,1.1443387288627753
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000074.png 120,191,170,219,0,2.8271608358635985 47,350,97,385,0,2.587419355148685 293,75,438,137,0,1.3123206897763018
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000075.png 81,232,130,256,0,2.73265223460736 14,393,62,433,0,2.470555963483516 309,127,441,181,0,1.4304406734134067
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000076.png 85,207,138,228,0,2.706750283318593 39,368,86,407,0,2.430911575975821 405,85,480,135,0,1.6227135197392653
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000077.png 113,230,168,255,0,2.598600891180348 74,398,133,441,0,2.3251012716133372
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000078.png 93,241,146,263,0,2.4548694515889435 70,412,128,455,0,2.202558812776253
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000079.png 47,245,105,270,0,2.320527456627062 35,432,107,487,0,2.096866161693137
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000080.png 5,477,54,536,0,1.9234187376601701
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000083.png 11,512,87,579,0,1.7680775690931867
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000085.png 48,268,125,307,0,1.7795939974755857 175,511,255,588,0,1.901324162418537
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000086.png 85,247,159,284,0,1.8259600223326824 223,470,297,539,0,2.0075673380164547
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000088.png 143,424,210,474,0,1.9646061035023303 271,169,382,218,0,0.9588418754769374
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000089.png 0,275,60,313,0,1.9244908919736068 143,455,215,510,0,1.876559047431213 244,182,373,232,0,0.8497077877551554
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000090.png 103,438,175,505,0,1.849588952075939 207,163,336,224,0,0.7952717294773329
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000092.png 104,270,171,303,0,1.9481418017597423 229,473,300,542,0,1.783314168209201 146,160,302,237,0,0.7987963531727199
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000093.png 141,290,202,324,0,2.038932278062842 260,515,323,581,0,1.8453898359759753 97,187,272,266,0,0.916601436264623
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000095.png 283,189,337,220,0,2.2744377635474007 329,409,403,470,0,2.0449490131631944 103,99,256,162,0,1.1981825464611946
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000096.png 270,176,320,206,0,2.411208205995703 326,385,399,441,0,2.1611748647179736 75,111,215,172,0,1.3811262295230429
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000097.png 295,180,346,205,0,2.558559013200953 326,377,391,432,0,2.284888337282842 85,115,193,174,0,1.5775755114994203
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000098.png 296,202,354,228,0,2.702161408586171 319,387,382,439,0,2.4040256900952537 88,152,180,197,0,1.7986302978584388
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000099.png 305,185,356,211,0,2.8254766129374556 314,361,375,410,0,2.5296119777637576 86,146,161,186,0,1.9843075353076194
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000100.png 325,228,374,252,0,2.853016220851917 323,399,382,450,0,2.567256687711629 109,192,181,227,0,2.1076941460107155
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000101.png 305,215,353,241,0,2.91155796158514 291,375,346,418,0,2.6269408353963044 97,174,155,209,0,2.239116875185722
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000104.png 436,200,480,228,0,2.6088268451546854 381,365,434,403,0,2.4217735174678996 184,157,240,181,0,2.337327993281708
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000106.png 377,364,427,405,0,2.3713038961809074 202,135,256,160,0,2.4016864625036263
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000107.png 425,393,480,436,0,2.272315686148443 242,155,301,183,0,2.3704598545259934
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000108.png 391,371,444,415,0,2.265648599875045 233,127,292,153,0,2.420638824180399
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000110.png 358,82,420,115,0,2.639928944528344
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000111.png 428,436,480,490,0,2.347918921682584 336,165,391,192,0,2.7562800607212488
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000112.png 362,168,413,195,0,2.7863907218866273
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000113.png 363,376,427,422,0,2.3339466144885246 328,116,376,142,0,2.7784826731623333
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000114.png 383,374,452,423,0,2.324852216352418 377,102,425,127,0,2.750493724617853
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000115.png 371,397,438,446,0,2.2829496563006937 363,129,409,155,0,2.6830272881921653
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000116.png 322,394,386,444,0,2.293040018676144 343,132,384,156,0,2.7224858346883845
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000117.png 346,424,405,470,0,2.3039297275241415
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000118.png 413,237,480,286,0,1.705832794407594 292,365,346,405,0,2.3659997835641535
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000119.png 424,211,480,256,0,1.7467299330489285 313,336,364,377,0,2.4322347442129146 362,66,418,91,0,2.8128192769840226
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000122.png 407,197,480,243,0,1.8168536146133927 334,313,390,358,0,2.562041929850279
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000123.png 374,222,448,269,0,1.8187017732784914 333,331,391,372,0,2.57195842468747
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000124.png 340,239,412,282,0,1.8885694446473746 322,346,377,390,0,2.6322086511228533
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000125.png 344,198,422,241,0,1.9234956783131918 337,306,393,346,0,2.656762833657056
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000126.png 332,226,405,273,0,1.9397316092778056 336,334,391,370,0,2.6503154206005664
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000128.png 303,226,378,267,0,2.032281549007633 331,330,384,368,0,2.712131087245249
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000129.png 323,207,400,246,0,2.0192533508569444 360,317,409,354,0,2.6832086727108635
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000130.png 278,265,350,300,0,2.0606397256562015 324,374,373,408,0,2.705463312502993
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000131.png 294,267,360,302,0,2.084148472378994 343,377,392,411,0,2.6973871204066104
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000134.png 242,219,300,252,0,2.119303694692477 326,331,375,363,0,2.631599700912241
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000135.png 274,212,332,247,0,2.1180154066793992 372,326,415,364,0,2.5928479384610785
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000136.png 274,211,328,248,0,2.170296132092139 374,330,421,367,0,2.593608241787676
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000139.png 230,162,284,193,0,2.2566412698171003 346,296,401,337,0,2.5179593730725243
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000140.png 194,200,253,229,0,2.2492536317785876 316,333,369,372,0,2.469088708082659
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000141.png 218,164,275,201,0,2.177573407863138 332,315,386,353,0,2.3505045764813235
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000142.png 229,154,293,187,0,2.1343232941108097 339,313,396,357,0,2.279153853298052
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000146.png 233,201,301,237,0,1.9036508670577954 363,394,436,449,0,1.884581742581748
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000147.png 255,203,320,237,0,1.9608025847558237 370,408,439,465,0,1.898507390340309
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000148.png 317,481,380,534,0,2.161123569004048 379,185,441,213,0,2.5391014821641646
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000149.png 296,415,363,466,0,2.205418169601567 379,119,444,146,0,2.550685413813665
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000150.png 283,444,350,489,0,2.324258952397262 396,178,455,202,0,2.6099674125517915
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000151.png 301,399,366,445,0,2.5090660132542983 424,140,480,167,0,2.746262694897891
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000152.png 263,409,323,449,0,2.6226518598766866 386,167,448,189,0,2.8085498774650595
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000153.png 237,404,291,438,0,2.7789410365815588 372,181,426,204,0,2.9238660150379414
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000154.png 281,386,333,421,0,2.8676822253649723 412,166,470,187,0,2.9637392810573067
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000156.png 303,362,350,394,0,2.9551064424644924
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000158.png 206,325,251,355,0,2.910967236551712 341,129,397,150,0,2.753114656653664
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000159.png 188,255,229,282,0,2.8253976374926983 346,47,394,73,0,2.645728289254294
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000160.png 205,262,247,290,0,2.8159573270491225 345,31,393,60,0,2.5945774860928754
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000161.png 310,187,480,294,0,0.7261037063152185 226,256,268,286,0,2.886603506497814 377,27,423,54,0,2.588270025997601
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000162.png 255,137,480,273,0,0.8443157782914134 273,223,315,251,0,2.8964197890390957
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000163.png 101,269,323,385,0,1.0575467848888809 308,311,345,339,0,2.988529991381444
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000164.png 0,299,134,404,0,1.2583272488912316 283,323,322,350,0,3.095080724364174 426,98,477,128,0,2.5555125206408964
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000165.png 313,327,353,355,0,3.0426483297033236
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000166.png 332,286,372,314,0,3.0139736064088196
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000168.png 408,333,454,365,0,2.77475438554949
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000169.png 372,262,419,292,0,2.6551479946600747
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000170.png 401,300,458,333,0,2.514697630456578
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000171.png 435,355,480,392,0,2.2822846665859235
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000180.png 343,236,480,312,0,0.9331049443804813
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000181.png 23,261,72,288,0,3.076626898665629 265,232,431,309,0,1.078676554993781
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000184.png 184,248,222,264,0,3.43038011529561 229,206,341,260,0,1.4130599922713207
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000185.png 238,230,271,249,0,3.5463328114984494 242,191,331,241,0,1.5350179352449969
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000186.png 309,209,346,227,0,3.5700014933552375 285,161,372,208,0,1.5781646247904317
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000187.png 326,221,359,238,0,3.5295887173767713 266,180,339,224,0,1.5960993900465532
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000188.png 12,419,69,457,0,2.9101733476995677 152,373,193,404,0,2.8184755519694153
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000189.png 26,381,80,418,0,2.926315318102061 162,347,201,374,0,2.8048088166547647
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000190.png 44,365,98,401,0,2.8984710634113937 179,329,217,357,0,2.7578236312167825
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000191.png 94,332,143,367,0,2.833859188905931 223,295,258,322,0,2.6715694790404854
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000193.png 274,263,452,376,0,0.77816435750609 175,273,217,304,0,2.9016952417419546 294,244,332,267,0,2.651882781823133
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000194.png 49,265,259,392,0,0.7907851336413145 212,258,248,285,0,2.829348822798744 337,232,378,260,0,2.5432164346598403
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000195.png 5,262,221,390,0,0.9201145139092741 215,260,248,286,0,2.8226489988421664 338,236,382,260,0,2.489036905805176
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000196.png 0,273,169,400,0,1.0661915010933438 260,274,300,305,0,2.821646277023507 384,264,438,298,0,2.445552486348157
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000197.png 0,275,166,391,0,1.1713598842416943 414,282,467,318,0,2.7206535659698465
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000198.png 14,256,150,349,0,1.320030229149479
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000207.png 91,252,155,288,0,2.510160603258305
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000208.png 181,180,232,206,0,2.6594480314091236
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000209.png 259,192,307,215,0,2.8717858388582416
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000210.png 278,155,330,179,0,2.980651199221069
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000211.png 288,225,330,250,0,3.0706649137997517
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000212.png 308,199,352,224,0,3.106622974227636 404,528,480,615,0,1.4303940396676267
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000214.png 311,208,345,230,0,3.1683667642534714 301,499,391,588,0,1.5467942891459618
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000215.png 329,234,369,252,0,3.2596195787627065 269,521,357,606,0,1.6921152104863053
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000216.png 359,136,399,152,0,3.2578593928576627 211,396,304,466,0,1.7543286620886889
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000218.png 47,354,103,393,0,2.7956156833261967 172,310,210,338,0,2.6223201090847565
+D:\Courses\Centernet\DronePoses\Dataset\scene\MainCamera\frame000219.png 68,327,116,363,0,2.7627138596300878 196,286,233,313,0,2.522643485851828
